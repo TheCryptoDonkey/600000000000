@@ -10,11 +10,18 @@ caption {
 }
 h1 {
     font-weight: bold;
-    margin:0 auto;
-    font-size: 666px;
-    line-height: 0.9;
+    margin: 0;
+    font-size: 25vh;
+    line-height: 0.95;
     text-align: center;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+    word-spacing: 100vw;
 }
 
 @media (max-width: 1100px) {
@@ -48,6 +55,8 @@ section {
     gap: 24px;
     max-width: 1029px;
     margin: 0 auto;
+    justify-content: center;
+    padding: 0 12px;
 }
 
 .team {
@@ -57,19 +66,12 @@ section {
     border-radius: 50%;
     align-content: center;
     padding: 0 0 12px;
-
-    @media (max-width: 1100px) {
-        width: calc((100vw / 3) - 32px);
-    }
+    flex-shrink: 0;
 }
 
 .team h2 {
     color: #f7931a;
     margin-bottom: 5px;
-
-    @media (max-width: 1100px) {
-        font-size: 22px;
-    }
 }
 
 .team img {
@@ -77,6 +79,8 @@ section {
     /*width: 210px;*/
     width: calc(80% - 50px);
     margin: 25px 0 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 .team a:visited,
 .team a {
@@ -84,7 +88,7 @@ section {
 }
 
 p {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 #team img {
@@ -93,6 +97,7 @@ p {
 #memes img {
     width: 25%;
     padding: 21px;
+    object-fit: contain;
 }
 #memes {
     display: flex;
@@ -131,6 +136,7 @@ iframe {
 .ordinals embed,
 .ordinals img {
     width: 200px;
+    object-fit: contain;
 }
 
 .ordinals {
@@ -145,4 +151,165 @@ iframe {
 
 .ordinals > a {
     text-align: center;
+}
+
+/* Tablet and below - 1100px */
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 24vh;
+    }
+
+    .team {
+        width: calc((100vw / 3) - 40px);
+        max-width: 327px;
+    }
+
+    .team h2 {
+        font-size: 22px;
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 23vh;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #team {
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .team {
+        width: calc((100vw / 2) - 44px);
+        min-width: 240px;
+        max-width: 300px;
+    }
+
+    .team img {
+        width: 60%;
+    }
+
+    .team h2 {
+        font-size: 18px;
+    }
+
+    .team h3 {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    #memes img {
+        width: 50%;
+        padding: 12px;
+    }
+
+    .ordinals embed,
+    .ordinals img {
+        width: 150px;
+    }
+
+    .ordinal {
+        padding: 6px;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22vh;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    body {
+        max-width: 100%;
+    }
+
+    #team {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .team {
+        width: 100%;
+        max-width: 340px;
+        min-width: 260px;
+    }
+
+    .team img {
+        width: 65%;
+    }
+
+    .team h2 {
+        font-size: 20px;
+    }
+
+    .team h3 {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    #memes img {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .ordinals embed,
+    .ordinals img {
+        width: 120px;
+    }
+
+    .ordinal {
+        padding: 4px;
+    }
+
+    .frame {
+        width: 93px;
+        height: 186px;
+    }
+
+    iframe {
+        transform: scale(0.075);
+    }
+}
+
+/* Small mobile - 375px */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 21vh;
+    }
+
+    #team {
+        padding: 0 12px;
+    }
+
+    .team {
+        min-width: 240px;
+        max-width: 300px;
+    }
+
+    .team img {
+        width: 70%;
+    }
+
+    .ordinals embed,
+    .ordinals img {
+        width: 100px;
+    }
 }
