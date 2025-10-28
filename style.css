@@ -55,6 +55,8 @@ section {
     gap: 24px;
     max-width: 1029px;
     margin: 0 auto;
+    justify-content: center;
+    padding: 0 12px;
 }
 
 .team {
@@ -64,6 +66,7 @@ section {
     border-radius: 50%;
     align-content: center;
     padding: 0 0 12px;
+    flex-shrink: 0;
 }
 
 .team h2 {
@@ -76,6 +79,8 @@ section {
     /*width: 210px;*/
     width: calc(80% - 50px);
     margin: 25px 0 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 .team a:visited,
 .team a {
@@ -92,6 +97,7 @@ p {
 #memes img {
     width: 25%;
     padding: 21px;
+    object-fit: contain;
 }
 #memes {
     display: flex;
@@ -130,6 +136,7 @@ iframe {
 .ordinals embed,
 .ordinals img {
     width: 200px;
+    object-fit: contain;
 }
 
 .ordinals {
@@ -153,7 +160,8 @@ iframe {
     }
 
     .team {
-        width: calc((100vw / 3) - 32px);
+        width: calc((100vw / 3) - 40px);
+        max-width: 327px;
     }
 
     .team h2 {
@@ -171,8 +179,19 @@ iframe {
         font-size: 24px;
     }
 
+    #team {
+        gap: 20px;
+        padding: 0 16px;
+    }
+
     .team {
-        width: calc((100vw / 2) - 32px);
+        width: calc((100vw / 2) - 44px);
+        min-width: 240px;
+        max-width: 300px;
+    }
+
+    .team img {
+        width: 60%;
     }
 
     .team h2 {
@@ -218,9 +237,19 @@ iframe {
         max-width: 100%;
     }
 
+    #team {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
     .team {
-        width: calc(100vw - 48px);
-        max-width: 300px;
+        width: 100%;
+        max-width: 340px;
+        min-width: 260px;
+    }
+
+    .team img {
+        width: 65%;
     }
 
     .team h2 {
@@ -264,6 +293,19 @@ iframe {
 @media (max-width: 375px) {
     h1 {
         font-size: 21vh;
+    }
+
+    #team {
+        padding: 0 12px;
+    }
+
+    .team {
+        min-width: 240px;
+        max-width: 300px;
+    }
+
+    .team img {
+        width: 70%;
     }
 
     .ordinals embed,
